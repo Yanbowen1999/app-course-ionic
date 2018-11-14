@@ -1,0 +1,11 @@
+page-a {
+    ion-scroll {
+        height: 50px;
+        white-space: nowrap;
+        span {
+            width: 100px;
+            text-align: center;
+            display: inline-block;
+        }
+    }
+}

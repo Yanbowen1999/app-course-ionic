@@ -1,0 +1,59 @@
+<!-- <ion-header>
+    <ion-navbar>
+        <ion-title>
+            About
+        </ion-title>
+    </ion-navbar>
+</ion-header> -->
+<ion-header no-border>
+    <ion-navbar color="#fafafa">
+        <ion-searchbar (click)='goSearch()' placeholder="双十二优惠好物超低价"></ion-searchbar>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <img src='../../assets/imgs/banner2.png' alt="images" />
+    <ul class="navList">
+        <li *ngFor='let item of arr;let idx=index;' (click)='isClick(idx)' [class.first]="isActive==idx" class='first'>{{arr[idx]}}</li>
+    </ul>
+    <div [ngSwitch]="isActive">
+        <div *ngSwitchCase="0">
+            <div class="little">
+                <span>———— 沙发 ————</span>
+                <ion-icon ios="ios-funnel" md="md-funnel"></ion-icon>
+            </div>
+            <ion-grid>
+                <ion-row class="photo">
+                    <ion-col>
+                        <img src='../../assets/imgs/sofa1.png' alt="images" />
+                    </ion-col>
+                    <ion-col>
+                        <img src='../../assets/imgs/sofa2.png' alt="images" />
+                    </ion-col>
+                </ion-row>
+                <ion-row class="photo">
+                    <ion-col class="sofa3">
+                        <img src='../../assets/imgs/sofa3.png' alt="images" />
+                        <div>
+                            <p>罗德蒙简约植绒布艺沙发</p>
+                            <p class="yuan">RMB 6500</p>
+                        </div>
+
+                    </ion-col>
+                    <ion-col>
+                        <img src='../../assets/imgs/sofa4.png' alt="images" />
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <div class="sp">查看全部商品>></div>
+            <div class="little">
+                <span>———— 电视柜 ————</span>
+                <ion-icon ios="ios-funnel" md="md-funnel"></ion-icon>
+            </div>
+        </div>
+        <div *ngSwitchCase="1">卧室页</div>
+        <div *ngSwitchCase="2">餐厅页</div>
+        <div *ngSwitchCase="3">书房页</div>
+        <div *ngSwitchCase="4">门厅页</div>
+    </div>
+
+</ion-content>

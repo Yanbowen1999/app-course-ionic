@@ -1,0 +1,37 @@
+page-add {
+    .list {
+        margin-top: 140px;
+        text-align: center;
+        ul {
+            margin: auto 40px;
+            li {
+                width: 100px;
+                height: 170px;
+                float: left;
+                margin: auto 20px;
+                div {
+                    width: 90px;
+                    height: 90px;
+                    margin: 0 5px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        margin: 15px;
+                    }
+                }
+                .div1 {
+                    background-color: #666666!important;
+                }
+                .p1 {
+                    line-height: 40px;
+                    font-size: 18px
+                }
+                .p2 {
+                    color: #584a08;
+                }
+            }
+        }
+    }
+}

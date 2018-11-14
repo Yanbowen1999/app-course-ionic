@@ -1,0 +1,70 @@
+<ion-header>
+    <ion-navbar>
+        <img src="../../assets/imgs/bg.png" alt="">
+        <div class='cover'>
+            <img src="../../assets/imgs/photo1.jpg" alt="">
+            <p>土方桔桔桔</p>
+        </div>
+
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item detail-push>
+            <ion-label>
+                我的订单
+            </ion-label>
+            <div item-content class="dingdan">
+                查看全部订单
+            </div>
+        </ion-item>
+    </ion-list>
+    <ion-grid>
+        <ion-row class="my">
+            <ion-col col-4 class="one">
+                <span><ion-img src="../../assets/imgs/发布.png"></ion-img></span>
+                <p>我的发布</p>
+            </ion-col>
+            <ion-col col-4>
+                <span><ion-icon name="md-star-outline"></ion-icon></span>
+                <p>我的收藏</p>
+            </ion-col>
+            <ion-col col-4>
+                <span><ion-icon ios="ios-eye" md="md-eye"></ion-icon></span>
+                <p>我的关注</p>
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="others">
+            <ion-col>
+                <span><ion-icon ios="ios-cart" md="md-cart"></ion-icon></span>
+                <p>购物车</p>
+            </ion-col>
+            <ion-col>
+                <span><ion-img src="../../assets/imgs/position.png"></ion-img></span>
+                <p>收货地址</p>
+            </ion-col>
+        </ion-row>
+        <ion-row class="others">
+            <ion-col>
+                <span><ion-img src='="../../assets/imgs/优惠券.png'></ion-img></span>
+                <p>优惠券</p>
+            </ion-col>
+            <ion-col>
+                <span><ion-img src="../../assets/imgs/在线客服.png"></ion-img></span>
+                <p>在线客服</p>
+            </ion-col>
+        </ion-row>
+        <ion-row class="others">
+            <ion-col>
+                <span><ion-img src="../../assets/imgs/letter.png"></ion-img></span>
+                <p>我的消息</p>
+            </ion-col>
+            <ion-col (click)='goSub()'>
+                <span><ion-icon name="settings"></ion-icon></span>
+                <p>设置</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,22 @@
+page-b {
+    ion-content {
+        background: url(../../assets/imgs/bco.png);
+        background-size: cover;
+        .box {
+            ion-item {
+                background: transparent;
+            }
+            button {
+                color: #fff;
+                margin-top: 50px;
+            }
+            p {
+                color: #fff!important;
+                text-align: center;
+            }
+            ion-input {
+                //color: #fff;
+            }
+        }
+    }
+}

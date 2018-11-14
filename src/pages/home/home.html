@@ -1,0 +1,100 @@
+<ion-header no-border>
+    <ion-navbar color="yel">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title><img src="../../assets/imgs/title1.png"></ion-title>
+        <ion-buttons end>
+            <button ion-button>
+                <ion-icon name="ios-search"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <!-- 导航栏 -->
+    <ul class="navList">
+        <li *ngFor='let item of arr;let idx=index;' (click)='isClick(idx)' [class.first]="isActive==idx" class='first'>{{arr[idx]}}</li>
+    </ul>
+    <!-- 轮播 -->
+    <ion-slides (ionSlideDidChange)="change()" pager="true" autoplay="1000" loop="true" class="sli">
+        <ion-slide><img src="../../assets/imgs/banner.png" alt="" /></ion-slide>
+        <ion-slide><img src="../../assets/imgs/banner1.png" alt="" /></ion-slide>
+        <ion-slide><img src="../../assets/imgs/banner.png" alt="" /></ion-slide>
+    </ion-slides>
+    <!-- 商品列表 -->
+    <div [ngSwitch]="isActive">
+        <div *ngSwitchCase="0">
+            <img src="../../assets/imgs/txt.png" alt="">
+            <!-- 商品列表没用grid，改用普通li了，大家看看怎么写 -->
+            <ul class="goods">
+                <li>
+                    <img src="assets/imgs/img_03.png" alt="">
+                    <p>——北欧原木色——</p>
+                    <span><ion-icon name="md-star-half"></ion-icon></span>
+                </li>
+                <li>
+                    <img src="assets/imgs/img1_03.png" alt="">
+                    <p>——简约黑檀木茶几——</p>
+                    <span><ion-icon name="md-star-half"></ion-icon></span>
+                </li>
+                <li>
+                    <img src="assets/imgs/img3.png" alt="">
+                    <p>——北欧白橡木书架——</p>
+                    <span><ion-icon name="md-star-half"></ion-icon></span>
+                </li>
+                <li>
+                    <img src="assets/imgs/img4.png" alt="">
+                    <p>——北欧风餐边柜——</p>
+                    <span><ion-icon name="md-star-half"></ion-icon></span>
+                </li>
+                <li>
+                    <img src="assets/imgs/img3.png" alt="">
+                    <p>——北欧原木色——</p>
+                    <span><ion-icon name="md-star-half"></ion-icon></span>
+                </li>
+                <li>
+                    <img src="assets/imgs/img4.png" alt="">
+                    <p>——北欧原木色——</p>
+                    <span><ion-icon name="md-star-half"></ion-icon></span>
+                </li>
+            </ul>
+        </div>
+        <div *ngSwitchCase="1">
+            <ion-grid>
+                <ion-row class="three">
+                    <ion-col>
+                        <img src="../../assets/imgs/title0.png" alt="images" />
+                        <p>客厅</p>
+                    </ion-col>
+                    <ion-col>
+                        <img src="../../assets/imgs/title2.png" alt="images" />
+                        <p>书房</p>
+                    </ion-col>
+                    <ion-col>
+                        <img src="../../assets/imgs/title3.png" alt="images" />
+                        <p>门厅</p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <img src="../../assets/imgs/txt1.png" alt="">
+            <ion-grid>
+                <ion-row class="two">
+                    <ion-col>
+                        <img src='../../assets/imgs/img5.png' alt="images" />
+                        <p>-欧洲全实木花几-</p>
+                        <span><ion-icon name="md-star-half"></ion-icon></span>
+                    </ion-col>
+                    <ion-col>
+                        <img src='../../assets/imgs/img6.png' alt="images" />
+                        <p>-现代简约早餐桌-</p>
+                        <span><ion-icon name="md-star-half"></ion-icon></span>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+        <div *ngSwitchCase="2">餐厨页</div>
+        <div *ngSwitchCase="3">床上用品页</div>
+    </div>
+</ion-content>
