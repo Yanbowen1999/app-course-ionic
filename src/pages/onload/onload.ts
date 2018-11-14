@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { App,IonicPage, NavController, NavParams } from 'ionic-angular';
 import { BPage } from '../b/b';
+import { TabsPage } from '../tabs/tabs';
 
 /**
  * Generated class for the OnloadPage page.
@@ -16,7 +17,7 @@ import { BPage } from '../b/b';
 })
 export class OnloadPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public app:App, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -26,6 +27,6 @@ export class OnloadPage {
     this.navCtrl.push(BPage);
   }
   goTabs(){
-    App.getRootNavs()[0].setRoot(TabsPage);
+    this.app.getRootNavs()[0].setRoot(TabsPage);
   }
 }

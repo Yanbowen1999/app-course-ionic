@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { App,IonicPage, NavController, NavParams } from 'ionic-angular';
 import { OnloadPage } from '../onload/onload';
 
 /**
@@ -16,13 +16,13 @@ import { OnloadPage } from '../onload/onload';
 })
 export class SettingPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public app:App,public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     //console.log('ionViewDidLoad SettingPage');
   }
   goOnload(){
-    this.navCtrl.push(OnloadPage);
+    this.app.getRootNavs()[0].setRoot(OnloadPage);
   }
 }
